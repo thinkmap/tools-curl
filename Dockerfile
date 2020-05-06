@@ -13,5 +13,5 @@ RUN apk add --update --no-cache curl openssh vim wget bash && rm -rf /var/cache/
 
 COPY entrypoint.sh /
 RUN cd / && chmod +x entrypoint.sh
-CMD ["curl"]
+CMD ["curl","bash"]
 ENTRYPOINT ["/entrypoint.sh"]
